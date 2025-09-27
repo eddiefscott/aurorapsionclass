@@ -22,7 +22,7 @@
       <p>You wield mental “powers” using a pool of <em>Psi Points</em>. Casting a power costs psi points equal to the power’s level (cantrips cost 0). You regain all expended psi points when you finish a long rest. You can’t spend more psi points on a single casting than your Psion level. Your casting ability is Intelligence (save DC = 8 + PB + Int mod; attack = PB + Int mod).</p>
 
       <h4>Mental Strain (Level 1)</h4>
-      <p>You may enhance a power by taking <em>Strain</em>. Each enhancement adds 1 Strain to your Strain Level. Your safe threshold equals your Int modifier + proficiency bonus. When you exceed this threshold, after each power you roll on the Backlash Table; for each point above the threshold, roll an additional time.</p>
+      <p>You may enhance a power by taking <em>Strain</em>. Each enhancement adds 1 Strain to your Strain Level. Your safe threshold equals your Int modifier + psion level. When you exceed this threshold, after each power you roll on the Backlash Table; for each point above the threshold, roll an additional time.</p>
 
       <h4>Backlash Table (d6)</h4>
       <ol>
@@ -31,7 +31,7 @@
         <li><strong>Fractured Mind.</strong> Disadvantage on Intelligence saving throws until you finish a short or long rest.</li>
         <li><strong>Collapse of Will.</strong> You fall prone and restrain yourself until the start of your next turn.</li>
         <li><strong>Psychic Detonation.</strong> All creatures within 10 feet of you take psychic damage equal to 2 × your Strain Level (Con save for half).</li>
-        <li><strong>Willpower Feedback.</strong> No immediate effect, but your Strain Level increases by 1 instead of decreasing.</li>
+        <li><strong>Willpower Feedback.</strong> No immediate effect.</li>
       </ol>
 
       <h4>Enhancements (Level 1)</h4>
@@ -74,7 +74,7 @@
 
   <element name="Mental Strain" type="Class Feature" source="Homebrew" id="ID_HB_PSION_FEATURE_STRAIN">
     <description>
-      <p>Apply one Enhancement by taking Strain. After exceeding your safe threshold (Int mod + PB), roll on the Backlash Table; roll one extra time for each point above threshold.</p>
+      <p>Apply one Enhancement by taking Strain. After exceeding your safe threshold (Int mod + PL), roll on the Backlash Table; roll one extra time for each point above threshold.</p>
     </description>
     <sheet>
       <description>Enhance powers by taking Strain; roll backlash over threshold.</description>
