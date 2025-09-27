@@ -4,7 +4,7 @@
     <name>Psion (Homebrew)</name>
     <description>Custom Int-based Psion class with psi-powered casting and a Mental Strain overcharge system.</description>
     <author url="https://github.com/eddiefscott/aurorapsionclass">Eddie Scott</author>
-    <update version="0.1.3">
+    <update version="0.1.4">
       <file name="psion.xml" url="https://raw.githubusercontent.com/eddiefscott/aurorapsionclass/main/psion.xml" />
     </update>
   </info>
@@ -30,7 +30,7 @@
         <li><strong>Cerebral Rupture.</strong> Take psychic damage equal to twice your Psion level and become stunned until the end of your next turn.</li>
         <li><strong>Fractured Mind.</strong> Disadvantage on Intelligence saving throws until you finish a short or long rest.</li>
         <li><strong>Collapse of Will.</strong> You fall prone and restrain yourself until the start of your next turn.</li>
-        <li><strong>Psychic Detonation.</strong> All creatures within 10 feet of you take psychic damage equal to 2 × your Strain Level.</li>
+        <li><strong>Psychic Detonation.</strong> All creatures within 10 feet of you take psychic damage equal to 2 × your Strain Level (Con save for half).</li>
         <li><strong>Willpower Feedback.</strong> No immediate effect, but your Strain Level increases by 1 instead of decreasing.</li>
       </ol>
 
@@ -74,7 +74,7 @@
 
   <element name="Mental Strain" type="Class Feature" source="Homebrew" id="ID_HB_PSION_FEATURE_STRAIN">
     <description>
-      <p>Apply one Enhancement by taking 1 Strain. After exceeding your safe threshold (Int mod + PB), roll on the Backlash Table; roll one extra time for each point above threshold.</p>
+      <p>Apply one Enhancement by taking Strain. After exceeding your safe threshold (Int mod + PB), roll on the Backlash Table; roll one extra time for each point above threshold.</p>
     </description>
     <sheet>
       <description>Enhance powers by taking Strain; roll backlash over threshold.</description>
@@ -90,13 +90,13 @@
     </sheet>
   </element>
 
-  <!-- NEW: Provide actual spell picks so Magic tab shows options -->
+  <!-- Selections with distinct supports to avoid cross-picking -->
   <element name="Spell Selection (Level 1)" type="Class Feature" source="Homebrew" id="ID_HB_PSION_FEATURE_SPELL_SELECT_L1">
     <description>
       <p>Choose your psionic cantrips and 1st-level powers.</p>
     </description>
     <rules>
-      <select type="Spell" name="Psion Cantrips" supports="Psion" level="0" number="3"/>
+      <select type="Spell" name="Psion Cantrips" supports="Psion Cantrip" level="0" number="3"/>
       <select type="Spell" name="Psion Powers Known" supports="Psion" level="1" number="4"/>
     </rules>
     <sheet>
@@ -104,9 +104,9 @@
     </sheet>
   </element>
 
-  <!-- ===== CANTRIPS (Psion) ===== -->
+  <!-- ===== CANTRIPS (supports = Psion Cantrip) ===== -->
   <element name="Mind Thrust" type="Spell" source="Homebrew" id="ID_HB_PSION_SPELL_MIND_THRUST">
-    <supports>Psion</supports>
+    <supports>Psion Cantrip</supports>
     <description>
       <p><strong>Cantrip (Enchantment)</strong> — 1 action; 60 ft; Instantaneous.</p>
       <p>Int save; 1d8 psychic (scales at 5/11/17). On failure, the target subtracts 1d4 from its next save before your next turn.</p>
@@ -123,7 +123,7 @@
   </element>
 
   <element name="Mind Sliver" type="Spell" source="TCoE (relisted)" id="ID_HB_PSION_SPELL_MIND_SLIVER">
-    <supports>Psion</supports>
+    <supports>Psion Cantrip</supports>
     <description>
       <p><strong>Cantrip (Enchantment)</strong> — 1 action; 60 ft; Instantaneous.</p>
       <p>As printed: Int save; 1d6 psychic (scales); -1d4 to next save.</p>
@@ -140,7 +140,7 @@
   </element>
 
   <element name="Thought Lash" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_THOUGHT_LASH">
-    <supports>Psion</supports>
+    <supports>Psion Cantrip</supports>
     <description>
       <p><strong>Cantrip (Enchantment)</strong> — 1 action; 60 ft; Instantaneous.</p>
       <p>Reflavored <em>vicious mockery</em>: Cha save; psychic damage (scales); disadvantage on next attack.</p>
@@ -156,7 +156,7 @@
   </element>
 
   <element name="Telepathic Hand" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_TELEPATHIC_HAND">
-    <supports>Psion</supports>
+    <supports>Psion Cantrip</supports>
     <description>
       <p><strong>Cantrip (Conjuration)</strong> — 1 action; 30 ft; 1 minute.</p>
       <p>Invisible hand of will (as <em>mage hand</em>).</p>
@@ -172,7 +172,7 @@
   </element>
 
   <element name="Intuition Nudge" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_INTUITION_NUDGE">
-    <supports>Psion</supports>
+    <supports>Psion Cantrip</supports>
     <description>
       <p><strong>Cantrip (Divination)</strong> — 1 action; Touch; Concentration, up to 1 minute.</p>
       <p>Reflavored <em>guidance</em>: +1d4 to one ability check.</p>
@@ -188,7 +188,7 @@
   </element>
 
   <element name="Thought Projection" type="Spell" source="Homebrew" id="ID_HB_PSION_SPELL_THOUGHT_PROJECTION">
-    <supports>Psion</supports>
+    <supports>Psion Cantrip</supports>
     <description>
       <p><strong>Cantrip (Illusion)</strong> — 1 action; 30 ft; Concentration, up to 1 minute.</p>
       <p>Project an illusory self that can gesture and speak telepathically to one creature at a time within 30 ft.</p>
@@ -204,7 +204,7 @@
   </element>
 
   <element name="Mental Static" type="Spell" source="Homebrew" id="ID_HB_PSION_SPELL_MENTAL_STATIC">
-    <supports>Psion</supports>
+    <supports>Psion Cantrip</supports>
     <description>
       <p><strong>Cantrip (Enchantment)</strong> — 1 action; 60 ft; Instantaneous.</p>
       <p>Int save or the target has disadvantage on attack rolls until the start of your next turn.</p>
@@ -220,7 +220,7 @@
   </element>
 
   <element name="Psychic Spark" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_PSYCHIC_SPARK">
-    <supports>Psion</supports>
+    <supports>Psion Cantrip</supports>
     <description>
       <p><strong>Cantrip (Evocation)</strong> — 1 action; 120 ft; Instantaneous.</p>
       <p>Reflavored <em>fire bolt</em>: Ranged spell attack for 1d10 psychic (scales).</p>
@@ -235,7 +235,7 @@
     </setters>
   </element>
 
-  <!-- ===== 1ST-LEVEL POWERS ===== -->
+  <!-- ===== 1ST-LEVEL POWERS (supports = Psion) ===== -->
   <element name="Id Spike" type="Spell" source="Homebrew" id="ID_HB_PSION_SPELL_ID_SPIKE">
     <supports>Psion</supports>
     <description>
