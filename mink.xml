@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+  <info>
+    <name>Mink (Race)</name>
+    <description>A small, sleek mustelid folk—quick, clever, and quietly telepathic.</description>
+    <author url="https://github.com/eddiefscott/aurorapsionclass">eddiefscott</author>
+    <update version="0.0.1">
+      <file name="mink.xml" url="https://raw.githubusercontent.com/eddiefscott/aurorapsionclass/main/mink.xml" />
+    </update>
+  </info>
+
+  <!-- Source for nice grouping in Aurora -->
+  <element name="Homebrew: Mink" type="Source" source="Homebrew" id="ID_HB_SOURCE_MINK">
+    <description><p>Telepathic mink folk.</p></description>
+  </element>
+
+  <!-- Race: Mink -->
+  <element name="Mink" type="Race" source="Homebrew: Mink" id="ID_HB_RACE_MINK">
+    <description>
+      <p class="flavor">Sleek and restless, mink folk skim riverbanks and city canals alike. Their whiskers twitch at hidden currents—of both water and thought.</p>
+      <h4>Ability Score Adjustment.</h4>
+      <p>Your Dexterity increases by 3, your Intelligence increases by 1, and your Strength decreases by 3.</p>
+      <h4>Size.</h4>
+      <p>You are Small.</p>
+      <h4>Speed.</h4>
+      <p>Your walking speed is 30 feet, and you have a swim speed of 30 feet.</p>
+      <h4>Telepathic Chirp.</h4>
+      <p>You can communicate telepathically with a creature you can see within 30 feet of you. The creature must understand at least one language. You don’t need to share a language with it, and it can reply to you telepathically (no action required) while it is within range.</p>
+      <h4>Keen Scent.</h4>
+      <p>You have advantage on Wisdom (Perception) checks that rely on smell.</p>
+      <h4>Mink Nimbleness.</h4>
+      <p>You can move through the space of any creature that is Medium or larger.</p>
+      <h4>Skulker’s Instincts.</h4>
+      <p>You have proficiency in the Stealth skill.</p>
+      <h4>Languages.</h4>
+      <p>You can speak, read, and write Common and one additional language of your choice.</p>
+    </description>
+
+    <sheet>
+      <description>
+        DEX +3, INT +1, STR –3; Small; walk 30 ft, swim 30 ft; telepathy 30 ft (two-way);
+        Keen Scent (adv. Perception by smell); Nimbleness (move through larger creatures); Stealth proficiency.
+      </description>
+    </sheet>
+
+    <rules>
+      <!-- Size & movement -->
+      <grant type="Size" id="ID_SIZE_SMALL" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <stat name="innate swim speed" value="30" bonus="base" />
+
+      <!-- Fixed ability adjustments -->
+      <stat name="strength" value="-3" />
+      <stat name="dexterity" value="3" />
+      <stat name="intelligence" value="1" />
+
+      <!-- Skills & languages -->
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+      <select type="Language" name="Bonus Language (Mink)" supports="Standard||Exotic" number="1" />
+
+      <!-- Racial traits -->
+      <grant type="Racial Trait" id="ID_HB_MINK_TELEPATHY" />
+      <grant type="Racial Trait" id="ID_HB_MINK_KEEN_SCENT" />
+      <grant type="Racial Trait" id="ID_HB_MINK_NIMBLENESS" />
+    </rules>
+  </element>
+
+  <!-- Trait: Telepathic Chirp -->
+  <element name="Telepathic Chirp" type="Racial Trait" source="Homebrew: Mink" id="ID_HB_MINK_TELEPATHY">
+    <description>
+      <p>You can communicate telepathically with a creature you can see within 30 feet of you. The creature must understand at least one language. You don’t need to share a language, and it can reply to you telepathically (no action required) while within range.</p>
+    </description>
+    <sheet>
+      <description>Telepathy 30 ft (two-way with creatures that understand a language).</description>
+    </sheet>
+  </element>
+
+  <!-- Trait: Keen Scent -->
+  <element name="Keen Scent" type="Racial Trait" source="Homebrew: Mink" id="ID_HB_MINK_KEEN_SCENT">
+    <description>
+      <p>You have advantage on Wisdom (Perception) checks that rely on smell.</p>
+    </description>
+    <sheet>
+      <description>Advantage on Perception checks that rely on smell.</description>
+    </sheet>
+  </element>
+
+  <!-- Trait: Mink Nimbleness -->
+  <element name="Mink Nimbleness" type="Racial Trait" source="Homebrew: Mink" id="ID_HB_MINK_NIMBLENESS">
+    <description>
+      <p>You can move through the space of any creature that is Medium or larger.</p>
+    </description>
+    <sheet>
+      <description>Move through the space of Medium or larger creatures.</description>
+    </sheet>
+  </element>
+</elements>
