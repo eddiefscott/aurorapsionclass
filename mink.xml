@@ -4,7 +4,7 @@
     <name>Mink (Race)</name>
     <description>A small, sleek mustelid folk—quick, clever, and quietly telepathic.</description>
     <author url="https://github.com/eddiefscott/aurorapsionclass">eddiefscott</author>
-    <update version="0.0.1">
+    <update version="0.0.2">
       <file name="mink.xml" url="https://raw.githubusercontent.com/eddiefscott/aurorapsionclass/main/mink.xml" />
     </update>
   </info>
@@ -12,6 +12,9 @@
   <!-- Source for nice grouping in Aurora -->
   <element name="Homebrew: Mink" type="Source" source="Homebrew" id="ID_HB_SOURCE_MINK">
     <description><p>Telepathic mink folk.</p></description>
+    <setters>
+      <set name="url">https://github.com/eddiefscott/aurorapsionclass</set>
+    </setters>
   </element>
 
   <!-- Race: Mink -->
