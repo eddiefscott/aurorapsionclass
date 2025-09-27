@@ -3,9 +3,9 @@
   <info>
     <name>Psion (Homebrew)</name>
     <description>Custom Int-based Psion class with psi-powered casting and a Mental Strain overcharge system.</description>
-    <author url="https://github.com/YOUR_GITHUB_USER/YOUR_REPO">Eddie Scott</author>
+    <author url="https://github.com//eddiefscott/aurorapsionclass">Eddie Scott</author>
     <update version="0.1.0">
-      <file name="psion.xml" url="https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO/main/psion.xml" />
+      <file name="psion.xml" url="https://raw.githubusercontent.com//eddiefscott/aurorapsionclass/main/psion.xml" />
     </update>
   </info>
 
