@@ -4,7 +4,7 @@
     <name>Psion (Homebrew)</name>
     <description>Custom Int-based Psion class with psi-powered casting and a Mental Strain overcharge system.</description>
     <author url="https://github.com/eddiefscott/aurorapsionclass">Eddie Scott</author>
-    <update version="0.1.0">
+    <update version="0.1.1">
       <file name="psion.xml" url="https://raw.githubusercontent.com/eddiefscott/aurorapsionclass/main/psion.xml" />
     </update>
   </info>
@@ -12,7 +12,7 @@
   <!-- ===== CLASS: PSION ===== -->
   <element name="Psion" type="Class" source="Homebrew" id="ID_HB_PSION_CLASS">
     <description>
-      <p><strong>Hit Dice.</strong> d6</p>
+      <p><strong>Hit Dice.</strong> d8</p>
       <p><strong>Primary Ability.</strong> Intelligence</p>
       <p><strong>Saving Throws.</strong> Intelligence, Wisdom</p>
       <p><strong>Armor &amp; Weapons.</strong> Light armor, simple weapons</p>
@@ -40,8 +40,8 @@
         <li><strong>Overpower (1 Strain):</strong> Increase all damage dice of this power by one step (d6→d8, d8→d10, etc.).</li>
         <li><strong>Psychic Shield (1 Strain):</strong> Gain temporary hit points equal to your Intelligence modifier.</li>
         <li><strong>Piercing Thought (1 Strain):</strong> Impose disadvantage on one target’s saving throw against this power.</li>
-        <li><strong>Unnerving Glare (1 Strain):</strong> When you damage a creature with a psionic power, you may force it to make a Wisdom saving throw. On a failed save, until the end of your next turn, the target cannot take reactions, and it can either move or take an action on its turn (not both).</li>
-        <li><strong>Mind Trip (1 Strain):</strong> When you damage a creature with a psionic power, you may force any creature of your choice within 10 feet of the original target to make a Constitution saving throw. On a failed save, it falls prone and takes 1d6 psychic damage (half damage on a success, no knockdown).</li>
+        <li><strong>Unnerving Glare (1 Strain):</strong> Until the end of your next turn, the target cannot take reactions, and it can either move or take an action on its turn (not both).</li>
+        <li><strong>Mind Trip (1 Strain):</strong> Any creature of your choice within 10 feet of the original target makes a Con save; on a failure it falls prone and takes 1d6 psychic damage (half on a success, no knockdown).</li>
       </ul>
       <p>You learn additional enhancements at levels 3, 6, 10, 14, and 18.</p>
 
@@ -50,7 +50,7 @@
     </description>
 
     <setters>
-      <set name="hitdice">d6</set>
+      <set name="hd">d8</set>
       <set name="short">Int-based manifester using Psi Points and Strain-fueled Enhancements.</set>
     </setters>
 
