@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <info>
+    <name>Psion (Homebrew)</name>
+    <description>Custom Int-based Psion class using Psi Points and Strain enhancements.</description>
+    <author url="https://github.com/YOUR_GITHUB_USER/YOUR_REPO">Eddie Scott</author>
+    <update version="0.1.0">
+      <!-- Replace the URL below with your actual raw .index URL after uploading -->
+      <file name="psion.index" url="https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO/main/psion.index" />
+    </update>
+  </info>
+
+  <files>
+    <!-- IMPORTANT: Replace with the raw URL to your psion.xml in your repo -->
+    <file name="psion.xml" url="https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO/main/psion.xml" />
+  </files>
+</index>
