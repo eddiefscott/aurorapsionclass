@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <info>
+    <name>Mink (Race) – Homebrew</name>
+    <description>Telepathic, semi-aquatic mink folk.</description>
+    <author url="https://github.com/eddiefscott/aurorapsionclass">eddiefscott</author>
+    <update version="0.0.1">
+      <file name="mink.index" url="https://raw.githubusercontent.com/eddiefscott/aurorapsionclass/main/mink.index" />
+    </update>
+  </info>
+  <files>
+    <file name="mink.xml" url="https://raw.githubusercontent.com/eddiefscott/aurorapsionclass/main/mink.xml" />
+  </files>
+</index>
