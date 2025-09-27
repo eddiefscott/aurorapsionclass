@@ -4,7 +4,7 @@
     <name>Psion (Homebrew)</name>
     <description>Custom Int-based Psion class with psi-powered casting and a Mental Strain overcharge system.</description>
     <author url="https://github.com/eddiefscott/aurorapsionclass">Eddie Scott</author>
-    <update version="0.1.1">
+    <update version="0.1.2">
       <file name="psion.xml" url="https://raw.githubusercontent.com/eddiefscott/aurorapsionclass/main/psion.xml" />
     </update>
   </info>
@@ -93,163 +93,307 @@
   <element name="Mind Thrust" type="Spell" source="Homebrew" id="ID_HB_PSION_SPELL_MIND_THRUST">
     <supports>Psion</supports>
     <description>
-      <p><strong>Cantrip</strong> — 1 action; 60 ft; Instant.</p>
+      <p><strong>Cantrip (Enchantment)</strong> — 1 action; 60 ft; Instantaneous.</p>
       <p>Int save; 1d8 psychic (scales at 5/11/17). On failure, the target subtracts 1d4 from its next save before your next turn.</p>
       <p><em>Homebrew.</em></p>
     </description>
+    <setters>
+      <set name="level">0</set>
+      <set name="school">Enchantment</set>
+      <set name="time">1 action</set>
+      <set name="range">60 feet</set>
+      <set name="components">V,S</set>
+      <set name="duration">Instantaneous</set>
+    </setters>
   </element>
 
   <element name="Mind Sliver" type="Spell" source="TCoE (relisted)" id="ID_HB_PSION_SPELL_MIND_SLIVER">
     <supports>Psion</supports>
     <description>
-      <p><strong>Cantrip</strong> — 1 action; 60 ft; Instant.</p>
+      <p><strong>Cantrip (Enchantment)</strong> — 1 action; 60 ft; Instantaneous.</p>
       <p>As printed: Int save; 1d6 psychic (scales); -1d4 to next save.</p>
       <p><em>Official (relisted).</em></p>
     </description>
+    <setters>
+      <set name="level">0</set>
+      <set name="school">Enchantment</set>
+      <set name="time">1 action</set>
+      <set name="range">60 feet</set>
+      <set name="components">V</set>
+      <set name="duration">Instantaneous</set>
+    </setters>
   </element>
 
   <element name="Thought Lash" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_THOUGHT_LASH">
     <supports>Psion</supports>
     <description>
-      <p><strong>Cantrip</strong> — 1 action; 60 ft; Instant.</p>
+      <p><strong>Cantrip (Enchantment)</strong> — 1 action; 60 ft; Instantaneous.</p>
       <p>Reflavored <em>vicious mockery</em>: Cha save; psychic damage (scales); disadvantage on next attack.</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">0</set>
+      <set name="school">Enchantment</set>
+      <set name="time">1 action</set>
+      <set name="range">60 feet</set>
+      <set name="components">V</set>
+      <set name="duration">Instantaneous</set>
+    </setters>
   </element>
 
   <element name="Telepathic Hand" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_TELEPATHIC_HAND">
     <supports>Psion</supports>
     <description>
-      <p><strong>Cantrip</strong> — 1 action; 30 ft; 1 minute.</p>
+      <p><strong>Cantrip (Conjuration)</strong> — 1 action; 30 ft; 1 minute.</p>
       <p>Invisible hand of will (as <em>mage hand</em>).</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">0</set>
+      <set name="school">Conjuration</set>
+      <set name="time">1 action</set>
+      <set name="range">30 feet</set>
+      <set name="components">V,S</set>
+      <set name="duration">1 minute</set>
+    </setters>
   </element>
 
   <element name="Intuition Nudge" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_INTUITION_NUDGE">
     <supports>Psion</supports>
     <description>
-      <p><strong>Cantrip</strong> — 1 action; Touch; 1 minute (conc.).</p>
+      <p><strong>Cantrip (Divination)</strong> — 1 action; Touch; Concentration, up to 1 minute.</p>
       <p>Reflavored <em>guidance</em>: +1d4 to one ability check.</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">0</set>
+      <set name="school">Divination</set>
+      <set name="time">1 action</set>
+      <set name="range">Touch</set>
+      <set name="components">V,S</set>
+      <set name="duration">Concentration, up to 1 minute</set>
+    </setters>
   </element>
 
   <element name="Thought Projection" type="Spell" source="Homebrew" id="ID_HB_PSION_SPELL_THOUGHT_PROJECTION">
     <supports>Psion</supports>
     <description>
-      <p><strong>Cantrip</strong> — 1 action; 30 ft; 1 minute (conc.).</p>
+      <p><strong>Cantrip (Illusion)</strong> — 1 action; 30 ft; Concentration, up to 1 minute.</p>
       <p>Project an illusory self that can gesture and speak telepathically to one creature at a time within 30 ft.</p>
       <p><em>Homebrew.</em></p>
     </description>
+    <setters>
+      <set name="level">0</set>
+      <set name="school">Illusion</set>
+      <set name="time">1 action</set>
+      <set name="range">30 feet</set>
+      <set name="components">V,S</set>
+      <set name="duration">Concentration, up to 1 minute</set>
+    </setters>
   </element>
 
   <element name="Mental Static" type="Spell" source="Homebrew" id="ID_HB_PSION_SPELL_MENTAL_STATIC">
     <supports>Psion</supports>
     <description>
-      <p><strong>Cantrip</strong> — 1 action; 60 ft; Instant.</p>
+      <p><strong>Cantrip (Enchantment)</strong> — 1 action; 60 ft; Instantaneous.</p>
       <p>Int save or the target has disadvantage on attack rolls until the start of your next turn.</p>
       <p><em>Homebrew.</em></p>
     </description>
+    <setters>
+      <set name="level">0</set>
+      <set name="school">Enchantment</set>
+      <set name="time">1 action</set>
+      <set name="range">60 feet</set>
+      <set name="components">V,S</set>
+      <set name="duration">Instantaneous</set>
+    </setters>
   </element>
 
   <element name="Psychic Spark" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_PSYCHIC_SPARK">
     <supports>Psion</supports>
     <description>
-      <p><strong>Cantrip</strong> — 1 action; 120 ft; Instant.</p>
+      <p><strong>Cantrip (Evocation)</strong> — 1 action; 120 ft; Instantaneous.</p>
       <p>Reflavored <em>fire bolt</em>: Ranged spell attack for 1d10 psychic (scales).</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">0</set>
+      <set name="school">Evocation</set>
+      <set name="time">1 action</set>
+      <set name="range">120 feet</set>
+      <set name="components">V,S</set>
+      <set name="duration">Instantaneous</set>
+    </setters>
   </element>
 
   <!-- ===== 1ST-LEVEL POWERS ===== -->
   <element name="Id Spike" type="Spell" source="Homebrew" id="ID_HB_PSION_SPELL_ID_SPIKE">
     <supports>Psion</supports>
     <description>
-      <p><strong>1st-level</strong> — 1 action; 60 ft; Instant.</p>
+      <p><strong>1st-level (Enchantment)</strong> — 1 action; 60 ft; Instantaneous.</p>
       <p>Int save; 2d8 psychic (half on success). On a failed save, the target cannot take reactions until the start of your next turn.</p>
       <p><em>Homebrew.</em></p>
     </description>
+    <setters>
+      <set name="level">1</set>
+      <set name="school">Enchantment</set>
+      <set name="time">1 action</set>
+      <set name="range">60 feet</set>
+      <set name="components">V,S</set>
+      <set name="duration">Instantaneous</set>
+    </setters>
   </element>
 
   <element name="Psychic Push" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_PSYCHIC_PUSH">
     <supports>Psion</supports>
     <description>
-      <p><strong>1st-level</strong> — 1 action; Self (15-ft cube); Instant.</p>
+      <p><strong>1st-level (Evocation)</strong> — 1 action; Self (15-foot cube); Instantaneous.</p>
       <p>Reflavored <em>thunderwave</em>: Str save; 2d8 psychic and push 10 ft on fail (half and no push on success).</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">1</set>
+      <set name="school">Evocation</set>
+      <set name="time">1 action</set>
+      <set name="range">Self (15-foot cube)</set>
+      <set name="components">V,S</set>
+      <set name="duration">Instantaneous</set>
+    </setters>
   </element>
 
   <element name="Thought Spear" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_THOUGHT_SPEAR">
     <supports>Psion</supports>
     <description>
-      <p><strong>1st-level</strong> — 1 action; 120 ft; Instant.</p>
+      <p><strong>1st-level (Evocation)</strong> — 1 action; 120 ft; Instantaneous.</p>
       <p>Reflavored <em>guiding bolt</em>: Make a ranged spell attack; on hit 4d6 psychic and next attack vs target has advantage.</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">1</set>
+      <set name="school">Evocation</set>
+      <set name="time">1 action</set>
+      <set name="range">120 feet</set>
+      <set name="components">V,S</set>
+      <set name="duration">Instantaneous</set>
+    </setters>
   </element>
 
   <element name="Mental Shackles" type="Spell" source="Homebrew" id="ID_HB_PSION_SPELL_MENTAL_SHACKLES">
     <supports>Psion</supports>
     <description>
-      <p><strong>1st-level</strong> — 1 action; 60 ft; Up to 1 minute (conc.).</p>
-      <p>Wis save or restrained until end of your next turn. On subsequent turns you can use your action to extend (target repeats save at end of its turns).</p>
+      <p><strong>1st-level (Enchantment)</strong> — 1 action; 60 ft; Concentration, up to 1 minute.</p>
+      <p>Wis save or restrained until end of your next turn. You can use your action on subsequent turns to extend; target repeats save at end of its turns.</p>
       <p><em>Homebrew.</em></p>
     </description>
+    <setters>
+      <set name="level">1</set>
+      <set name="school">Enchantment</set>
+      <set name="time">1 action</set>
+      <set name="range">60 feet</set>
+      <set name="components">V,S</set>
+      <set name="duration">Concentration, up to 1 minute</set>
+    </setters>
   </element>
 
   <element name="Thought Shield" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_THOUGHT_SHIELD">
     <supports>Psion</supports>
     <description>
-      <p><strong>1st-level</strong> — 1 reaction (when hit); Self; 1 round.</p>
+      <p><strong>1st-level (Abjuration)</strong> — 1 reaction (when hit); Self; 1 round.</p>
       <p>Reflavored <em>shield</em>: +5 AC until start of next turn; negates magic-missile-like darts.</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">1</set>
+      <set name="school">Abjuration</set>
+      <set name="time">1 reaction</set>
+      <set name="range">Self</set>
+      <set name="components">V,S</set>
+      <set name="duration">1 round</set>
+    </setters>
   </element>
 
   <element name="Aegis of Will" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_AEGIS_OF_WILL">
     <supports>Psion</supports>
     <description>
-      <p><strong>1st-level</strong> — 1 bonus action; 30 ft; 1 minute (conc.).</p>
+      <p><strong>1st-level (Abjuration)</strong> — 1 bonus action; 30 ft; 1 minute (concentration).</p>
       <p>Reflavored <em>sanctuary</em>: Ward a creature; attackers must make a Wis save to target it.</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">1</set>
+      <set name="school">Abjuration</set>
+      <set name="time">1 bonus action</set>
+      <set name="range">30 feet</set>
+      <set name="components">V,S</set>
+      <set name="duration">Concentration, up to 1 minute</set>
+    </setters>
   </element>
 
   <element name="Mind Darts" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_MIND_DARTS">
     <supports>Psion</supports>
     <description>
-      <p><strong>1st-level</strong> — 1 action; 120 ft; Instant.</p>
+      <p><strong>1st-level (Evocation)</strong> — 1 action; 120 ft; Instantaneous.</p>
       <p>Reflavored <em>magic missile</em>: Three darts auto-hit for 1d4+1 psychic each.</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">1</set>
+      <set name="school">Evocation</set>
+      <set name="time">1 action</set>
+      <set name="range">120 feet</set>
+      <set name="components">V,S</set>
+      <set name="duration">Instantaneous</set>
+    </setters>
   </element>
 
   <element name="Mental Compulsion" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_MENTAL_COMPULSION">
     <supports>Psion</supports>
     <description>
-      <p><strong>1st-level</strong> — 1 action; 60 ft; 1 round.</p>
+      <p><strong>1st-level (Enchantment)</strong> — 1 action; 60 ft; 1 round.</p>
       <p>Reflavored <em>command</em>: One-word directive; Wis save negates.</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">1</set>
+      <set name="school">Enchantment</set>
+      <set name="time">1 action</set>
+      <set name="range">60 feet</set>
+      <set name="components">V</set>
+      <set name="duration">1 round</set>
+    </setters>
   </element>
 
   <element name="Psychic Hysteria" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_PSYCHIC_HYSTERIA">
     <supports>Psion</supports>
     <description>
-      <p><strong>1st-level</strong> — 1 action; 30 ft; Up to 1 minute (conc.).</p>
+      <p><strong>1st-level (Enchantment)</strong> — 1 action; 30 ft; Concentration, up to 1 minute.</p>
       <p>Reflavored <em>Tasha’s hideous laughter</em>: Wis save or prone and incapacitated, repeating saves at end of turns and when damaged.</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">1</set>
+      <set name="school">Enchantment</set>
+      <set name="time">1 action</set>
+      <set name="range">30 feet</set>
+      <set name="components">V</set>
+      <set name="duration">Concentration, up to 1 minute</set>
+    </setters>
   </element>
 
   <element name="Mind Scream" type="Spell" source="Reflavor" id="ID_HB_PSION_SPELL_MIND_SCREAM">
     <supports>Psion</supports>
     <description>
-      <p><strong>1st-level</strong> — 1 action; 60 ft; Instant.</p>
+      <p><strong>1st-level (Enchantment)</strong> — 1 action; 60 ft; Instantaneous.</p>
       <p>Reflavored <em>dissonant whispers</em>: Wis save; 3d6 psychic and forced movement on failure.</p>
       <p><em>Reflavor.</em></p>
     </description>
+    <setters>
+      <set name="level">1</set>
+      <set name="school">Enchantment</set>
+      <set name="time">1 action</set>
+      <set name="range">60 feet</set>
+      <set name="components">V</set>
+      <set name="duration">Instantaneous</set>
+    </setters>
   </element>
 </elements>
